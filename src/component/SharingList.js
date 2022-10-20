@@ -9,7 +9,7 @@ export default function SharingList() {
   const [sharings, setSharings] = useState([])
 
   useEffect(() => {
-    axios.get("http://localhost:5000/sharing").then(
+    axios.get("http://143.198.192.147:5000/sharing").then(
       res => {
         console.log(res.data)
         setSharings(res.data)
@@ -27,16 +27,16 @@ export default function SharingList() {
             Create Sharing
           </Link>
         </div>
-        <p className="font-bold mt-3">
+        <p className="font-bold mt-3 px-2">
           Sharing would be done on <a href="https://discord.gg/DnRsuvYqCf" style={{ color: "#005F95" }} target="_blank">Discord</a><br />
           Details:&nbsp;
           <a style={{ color: "#005F95" }} href="https://github.com/cpsumsu/CPS-Study-Club#readme" target="_blank">
             https://github.com/cpsumsu/CPS-Study-Club#readme
           </a>
         </p>
-        <div class="overflow-x-auto relative">
-          <table class="w-full text-md text-left text-gray-500 mt-3">
-            <thead class="text-md text-gray-700 uppercase bg-gray-50">
+        <div class="flex relative">
+          <table class="w-full text-sm text-left text-gray-500 mt-3">
+            <thead class="text-sm text-gray-700 uppercase bg-gray-50">
               <tr>
                 <th scope="col" class="py-3 px-6">
                   Topic
